@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Arrivals-->
+        <scene sceneID="TJl-m7-k04">
+            <objects>
+                <viewController storyboardIdentifier="ArrivingFlightViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pqF-C8-qhm" customClass="ArrivingFlightViewController" customModule="CollectionsAircraftTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FRV-bp-dco">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1iR-68-2gG">
+                                <rect key="frame" x="0.0" y="118" width="393" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search arriving flights" id="csG-lM-8AY">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="pqF-C8-qhm" id="cwS-zP-2ih"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArrivalCell" id="e4N-0g-BzT" customClass="ArrivalTableViewCell" customModule="CollectionsAircraftTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="94" width="393" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e4N-0g-BzT" id="8qy-bQ-CXe">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qd-Vw-HWI">
+                                                    <rect key="frame" x="10" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiJ-FQ-mod">
+                                                    <rect key="frame" x="175.66666666666666" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUJ-nx-4TF">
+                                                    <rect key="frame" x="341" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qUJ-nx-4TF" firstAttribute="top" secondItem="8qy-bQ-CXe" secondAttribute="top" constant="10" id="2sO-FE-9Ph"/>
+                                                <constraint firstItem="tiJ-FQ-mod" firstAttribute="centerX" secondItem="8qy-bQ-CXe" secondAttribute="centerX" id="8ia-Sq-czV"/>
+                                                <constraint firstAttribute="bottom" secondItem="qUJ-nx-4TF" secondAttribute="bottom" constant="10" id="Vrg-Ar-0RC"/>
+                                                <constraint firstItem="2Qd-Vw-HWI" firstAttribute="leading" secondItem="8qy-bQ-CXe" secondAttribute="leading" constant="10" id="X7Z-VL-2Wo"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Qd-Vw-HWI" secondAttribute="bottom" constant="10" id="dcq-Rt-4q2"/>
+                                                <constraint firstItem="2Qd-Vw-HWI" firstAttribute="top" secondItem="8qy-bQ-CXe" secondAttribute="top" constant="10" id="eIV-Gl-xSj"/>
+                                                <constraint firstItem="tiJ-FQ-mod" firstAttribute="centerY" secondItem="8qy-bQ-CXe" secondAttribute="centerY" id="p8q-W4-3tf"/>
+                                                <constraint firstAttribute="trailing" secondItem="qUJ-nx-4TF" secondAttribute="trailing" constant="10" id="sxk-IJ-ZgU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="arrivalTimeLable" destination="qUJ-nx-4TF" id="eG5-wh-d7d"/>
+                                            <outlet property="arriveFlightNumber" destination="2Qd-Vw-HWI" id="L3e-Vb-XIK"/>
+                                            <outlet property="departedCityLabel" destination="tiJ-FQ-mod" id="ome-Up-ecG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Xw-U4-Dfe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Xw-U4-Dfe" firstAttribute="trailing" secondItem="1iR-68-2gG" secondAttribute="trailing" id="1j2-4q-6Pj"/>
+                            <constraint firstItem="1iR-68-2gG" firstAttribute="leading" secondItem="7Xw-U4-Dfe" secondAttribute="leading" id="QSC-uN-egr"/>
+                            <constraint firstItem="7Xw-U4-Dfe" firstAttribute="bottom" secondItem="1iR-68-2gG" secondAttribute="bottom" id="jgg-Ho-Qh3"/>
+                            <constraint firstItem="1iR-68-2gG" firstAttribute="top" secondItem="7Xw-U4-Dfe" secondAttribute="top" id="yvJ-Gj-o97"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Arrivals" image="airplane.arrival" catalog="system" selectedImage="airplane.arrival" id="oMH-WI-a9u"/>
+                    <connections>
+                        <outlet property="searchBar" destination="csG-lM-8AY" id="KBL-Bw-HUD"/>
+                        <outlet property="tableView" destination="1iR-68-2gG" id="u1d-xl-FXj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGR-Gi-frY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3007" y="-543"/>
+        </scene>
+        <!--Departures-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DepartingFlightListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DepartingFlightListViewController" customModule="CollectionsAircraftTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="akm-zw-rhM">
+                                <rect key="frame" x="0.0" y="118" width="393" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search departing flights" id="WN1-on-j0x">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightCell" id="Dqq-Cy-21X" customClass="DepartureTableViewCell" customModule="CollectionsAircraftTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="94" width="393" height="41.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dqq-Cy-21X" id="saZ-qC-dsN">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75E-rE-7fJ">
+                                                    <rect key="frame" x="20.000000000000004" y="10.000000000000002" width="41.333333333333343" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOL-dj-QKf">
+                                                    <rect key="frame" x="341" y="10.000000000000002" width="42" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTR-Xt-gk7">
+                                                    <rect key="frame" x="176" y="10.666666666666666" width="41.333333333333343" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="75E-rE-7fJ" secondAttribute="bottom" constant="10" id="6xe-VQ-gR4"/>
+                                                <constraint firstItem="75E-rE-7fJ" firstAttribute="top" secondItem="saZ-qC-dsN" secondAttribute="top" constant="10" id="Gak-Mo-iSW"/>
+                                                <constraint firstAttribute="trailing" secondItem="rOL-dj-QKf" secondAttribute="trailing" constant="10" id="N63-ti-Yr2"/>
+                                                <constraint firstItem="75E-rE-7fJ" firstAttribute="leading" secondItem="saZ-qC-dsN" secondAttribute="leading" constant="20" id="aJv-cL-72z"/>
+                                                <constraint firstAttribute="bottom" secondItem="rOL-dj-QKf" secondAttribute="bottom" constant="10" id="cBC-8u-iV9"/>
+                                                <constraint firstItem="WTR-Xt-gk7" firstAttribute="centerY" secondItem="saZ-qC-dsN" secondAttribute="centerY" id="fb3-bW-xER"/>
+                                                <constraint firstItem="WTR-Xt-gk7" firstAttribute="centerX" secondItem="saZ-qC-dsN" secondAttribute="centerX" id="pv3-qS-Jsu"/>
+                                                <constraint firstItem="rOL-dj-QKf" firstAttribute="top" secondItem="saZ-qC-dsN" secondAttribute="top" constant="10" id="vEt-IV-i0y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="arrivalCityLabel" destination="WTR-Xt-gk7" id="ewn-xl-f2S"/>
+                                            <outlet property="departFlightNumberLabel" destination="75E-rE-7fJ" id="tjF-i4-ukX"/>
+                                            <outlet property="departureTImeLabel" destination="rOL-dj-QKf" id="h9r-Ps-XnV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="akm-zw-rhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FVh-5F-Wt2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="akm-zw-rhM" secondAttribute="bottom" id="Mli-QK-NEb"/>
+                            <constraint firstItem="akm-zw-rhM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fwd-jl-2dS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="akm-zw-rhM" secondAttribute="trailing" id="meS-cJ-Mdz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Departures" image="airplane.departure" catalog="system" selectedImage="airplane.departure" id="PCs-bm-aPW"/>
+                    <connections>
+                        <outlet property="searchBar" destination="WN1-on-j0x" id="0dr-vr-6hg"/>
+                        <outlet property="tableView" destination="akm-zw-rhM" id="7uK-2a-FAH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="185"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="f4X-1T-Lsa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RJ9-fM-omR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lnm-br-z0s">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w1Y-f9-aJ2"/>
+                        <segue destination="pqF-C8-qhm" kind="relationship" relationship="viewControllers" id="9XY-tI-Aqx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0n3-3a-aOv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081.679389312977" y="184.50704225352115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane.arrival" catalog="system" width="128" height="101"/>
+        <image name="airplane.departure" catalog="system" width="128" height="84"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
